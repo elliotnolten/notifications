@@ -47,7 +47,7 @@ h1 {
       -webkit-transition-delay:250ms;
       -webkit-transition-duration:500ms;
       -webkit-transition-timing:ease-in-out;
-      -webkit-animation:pulse 500ms ease-in-out;
+      -webkit-animation:pulse 250ms ease-in;
       -webkit-animation-delay:250ms;
     }//.sb-favorite
     .lists {
@@ -77,8 +77,15 @@ h1 {
     }//input
     .sb-check {
       position:absolute;
-      top:0;
+      top:-1em;
       right:0;
+      display:block;
+      height:100%;
+      opacity:0;
+    }
+    &.option .sb-check {
+      opacity:1;
+      -webkit-animation:pulse 250ms ease-in-out;
     }
   }
 }
@@ -105,8 +112,8 @@ h1 {
     -webkit-transform:scale(1);
   }
   50% {
-    opacity:0;
-    -webkit-transform:scale(1.2);
+    opacity:0.5;
+    -webkit-transform:scale(2);
   } 
   100% {
     opacity:1;
